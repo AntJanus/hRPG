@@ -1,0 +1,45 @@
+{
+  "name": "hrpg-lite",
+  "version": "0.0.1",
+  "description": "A lightweight HabitRPG front-end",
+  "main": "app/index.js", "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AntJanus/hrpg-lite.git"
+  },
+  "author": "Antonin Januska @antjanus",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AntJanus/hrpg-lite/issues"
+  },
+  "homepage": "https://github.com/AntJanus/hrpg-lite",
+  "devDependencies": {
+    "browserify": "^10.2.1",
+    "eslint-config-future": "^2.1.1",
+    "gulp": "^3.8.11",
+    "gulp-autoprefixer": "^2.3.0",
+    "gulp-concat": "^2.5.2",
+    "gulp-rimraf": "^0.1.1",
+    "gulp-sass": "^2.0.1",
+    "rimraf": "^2.3.4",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.1",
+    "react": "^0.13.3"
+  },
+  "browserify": {
+    "transform": [
+      [
+        "babelify",
+        {
+          "only": "app/js/"
+        }
+      ]
+    ]
+  }
+}
