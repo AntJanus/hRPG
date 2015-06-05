@@ -31,8 +31,10 @@
   "dependencies": {
     "alt": "^0.16.7",
     "babelify": "^6.1.2",
+    "bluebird": "^2.9.27",
     "browserify": "^10.2.1",
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "superagent-bluebird-promise": "^2.0.2"
   },
   "browserify": {
     "transform": [

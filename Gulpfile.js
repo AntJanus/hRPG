@@ -14,8 +14,7 @@ var js = './app/js';
 var sass = './web/sass';
 
 gulp.task('clean', ['clean:js', 'clean:css'], function(cb) {
-  console.log('Everything has been cleaned');
-  cb();
+  console.log('Everything has been cleaned'); cb();
 });
 
 gulp.task('clean:js', function(cb) {

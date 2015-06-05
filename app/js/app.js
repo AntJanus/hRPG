@@ -1,4 +1,5 @@
 import React from 'react';
+import Tasks from './components/Tasks.jsx';
 
 class App extends React.Component {
   constructor(options) {
@@ -7,7 +8,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div></div>
+      <Tasks />
     );
   }
 }
