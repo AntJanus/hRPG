@@ -2,10 +2,11 @@ import React from 'react';
 import TaskStore from '../stores/TaskStore';
 import TaskActions from '../actions/TaskActions';
 
+import Task from './Task.jsx';
+
 class Tasks extends React.Component {
   constructor() {
     super();
-    this.render = this.render.bind(this);
     this.state = TaskStore.getState();
 
     this.onChange = this.onChange.bind(this);
@@ -31,11 +32,12 @@ class Tasks extends React.Component {
       );
     }
 
+
     return (
       <ul>
         {this.state.tasks.map((task) => {
           return (
-            <li key={ task.id }>{ task.text }</li>
+              <Task taskData={ task } />
           );
         })}
       </ul>

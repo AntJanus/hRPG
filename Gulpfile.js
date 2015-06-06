@@ -11,7 +11,7 @@ var gulp         = require('gulp'),
 var build = './build';
 var app = './app';
 var js = './app/js';
-var sass = './web/sass';
+var sassDir = './app/sass';
 
 gulp.task('clean', ['clean:js', 'clean:css'], function(cb) {
   console.log('Everything has been cleaned'); cb();
@@ -48,7 +48,7 @@ gulp.task('scripts', ['copy'], function() {
 });
 
 gulp.task('sass', function() {
-  return gulp.src('sass/app.scss')
+  return gulp.src(sassDir + '/app.scss')
     .pipe(sass())
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie 9'],
@@ -59,6 +59,6 @@ gulp.task('sass', function() {
   ;
 });
 
-gulp.task('build', ['clean', 'copy', 'scripts'], function() {
+gulp.task('build', ['clean', 'copy', 'sass', 'scripts'], function() {
   console.log('Front-end built.');
 });
