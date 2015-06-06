@@ -7,6 +7,8 @@ class Tasks extends React.Component {
     super();
     this.render = this.render.bind(this);
     this.state = TaskStore.getState();
+
+    this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
@@ -33,7 +35,7 @@ class Tasks extends React.Component {
       <ul>
         {this.state.tasks.map((task) => {
           return (
-            <li>{ task.text }</li>
+            <li key={ task.id }>{ task.text }</li>
           );
         })}
       </ul>

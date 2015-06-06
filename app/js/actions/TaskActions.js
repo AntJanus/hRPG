@@ -5,13 +5,15 @@ class TaskActions {
   updateTasks(tasks) {
     this.dispatch(tasks);
   }
+
   fetchTasks() {
     this.dispatch();
 
     TasksFetcher
       .fetch()
       .then((response) => {
-        this.actions.updateTasks(response.data);
+        var data = JSON.parse(response.text);
+        this.actions.updateTasks(data);
       })
       .catch((e) => {
         console.log('Error fetching tasks:', e);

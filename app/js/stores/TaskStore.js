@@ -6,17 +6,20 @@ class TaskStore {
     this.tasks = [];
 
     this.bindListeners({
-      handleUpdateTasks: TaskActions.UPDATE_TASKS,
-      handleFetchTasks: TaskActions.FETCH_TASKS
+      handleUpdateTasks: TaskActions.updateTasks,
+      handleFetchTasks: TaskActions.fetchTasks
     });
   }
 
   handleUpdateTasks(tasks) {
     this.tasks = tasks;
+    this.setState({ tasks });
   }
 
   handleFetchTasks() {
     this.tasks = [];
+    const tasks = this.tasks;
+    this.setState(tasks);
   }
 }
 
