@@ -41,7 +41,7 @@ class Tasks extends React.Component {
     });
 
     var todos = this.state.tasks.filter((task) => {
-      return task.type === 'todo';
+      return task.type === 'todo' && !task.completed;
     });
 
 
@@ -52,7 +52,7 @@ class Tasks extends React.Component {
           <ul className="task-list">
             { habits.map((task) => {
               return (
-                  <Task taskData={ task } />
+                  <Task taskData={ task } key={ task.id }/>
               );
             })}
           </ul>
@@ -62,7 +62,7 @@ class Tasks extends React.Component {
           <ul className="task-list">
             { dailies.map((task) => {
               return (
-                  <Task taskData={ task } />
+                  <Task taskData={ task } key={ task.id }/>
               );
             })}
           </ul>
@@ -72,7 +72,7 @@ class Tasks extends React.Component {
           <ul className="task-list">
             { todos.map((task) => {
               return (
-                  <Task taskData={ task } />
+                  <Task taskData={ task } key={ task.id }/>
               );
             })}
           </ul>
