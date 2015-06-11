@@ -14,7 +14,7 @@ class Task extends React.Component {
 
     const task = this.props.taskData;
 
-    var classes = task.type + ' task';
+    var classes = (task.completed ? 'completed' : task.type) + ' task';
 
     return (
       <li className={ classes } key={ task.id }>{ task.text }</li>
