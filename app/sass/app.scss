@@ -1,45 +1,4 @@
-.grid {
-  max-width: 56em;
-  margin: 0 auto;
-}
+@import 'settings';
 
-.col-3 {
-  width: 32%;
-  padding: 10px;
-  box-sizing: border-box;
-  display: inline-block;
-  vertical-align: top;
-}
-
-.task-list {
-  list-style-type: none;
-  margin-left: 0;
-  padding-left: 0;
-}
-
-.task {
-  padding: 5px;
-  margin-bottom: 5px;
-  border: 1px solid black;
-
-  &.habit {
-    color: red;
-    border-color: red;
-  }
-
-  &.daily {
-    color: green;
-    border-color: green;
-  }
-
-  &.todo {
-    color: blue;
-    border-color: blue;
-  }
-
-  &.completed {
-    border-color: grey;
-    color: grey;
-  }
-
-}
+@import 'components/tasks';
+@import 'components/grid';

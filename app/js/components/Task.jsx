@@ -17,7 +17,12 @@ class Task extends React.Component {
     var classes = (task.completed ? 'completed' : task.type) + ' task';
 
     return (
-      <li className={ classes } key={ task.id }>{ task.text }</li>
+      <li className={ classes } key={ task.id }>
+        <div className="task-check">[ ]</div>
+        <div className="task-content">
+          { task.text }
+        </div>
+      </li>
     );
   }
 }
