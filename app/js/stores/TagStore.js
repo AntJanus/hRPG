@@ -1,19 +1,20 @@
 import alt from '../alt';
-import TagActions from '../actions/TagActions';
+
+import AppActions from '../actions/AppActions';
 
 class TagStore {
   constructor() {
     this.tags = [];
 
     this.bindListeners({
-      handleUpdateTags: TagActions.updateTags,
-      handleFetchTags: TagActions.fetchTags
+      handleUpdateTags: AppActions.updateAll,
+      handleFetchTags: AppActions.fetchAll
     });
   }
 
-  handleUpdateTags(tags) {
-    this.tags = tags;
-    this.setState({ tags });
+  handleUpdateTags(data) {
+    this.tags = data.tags;
+    this.setState({ tags: data.tags });
   }
 
   handleFetchTags() {

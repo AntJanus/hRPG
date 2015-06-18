@@ -7,7 +7,9 @@ class TaskGroup extends React.Component {
   constructor() {
     super();
   }
-render() { if(!this.props.tasks) {
+
+  render() {
+    if(!this.props.tasks) {
       return (
         <ul></ul>
       );
@@ -39,8 +41,8 @@ render() { if(!this.props.tasks) {
       var taskGroup = taskGroups[tagString];
 
       allTasks.push(
-        <div>
-          <h3><Tag tag={ tagString } /></h3>
+        <div key={ tagString }>
+          <h5><Tag tag={ tagString } /></h5>
           <ul className="task-list">
             { taskGroup }
           </ul>

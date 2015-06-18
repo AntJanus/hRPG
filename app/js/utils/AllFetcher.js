@@ -1,0 +1,16 @@
+import config from '../../../config';
+import request from 'superagent-bluebird-promise';
+
+var baseUrl = 'https://habitrpg.com/api/v2';
+
+var AllFetcher = {
+  fetch() {
+    return request
+      .get(baseUrl + '/user')
+      .set('x-api-user', config.id)
+      .set('x-api-key', config.token)
+    ;
+  }
+};
+
+export default AllFetcher;

@@ -6,14 +6,12 @@ import TaskGroup from './TaskGroup.jsx';
 
 class Tasks extends React.Component {
   constructor() {
-    super();
-    this.state = TaskStore.getState();
+    super(); this.state = TaskStore.getState();
 
     this.onChange = this.onChange.bind(this);
   }
 
   componentDidMount() {
-    TaskActions.fetchTasks();
     TaskStore.listen(this.onChange);
   }
 
@@ -48,15 +46,15 @@ class Tasks extends React.Component {
     return (
       <div className="grid">
         <div className="col-3">
-          <h3>Habits</h3>
+          <h2>Habits</h2>
           <TaskGroup tasks={ habits } />
         </div>
         <div className="col-3">
-          <h3>Dailies</h3>
+          <h2>Dailies</h2>
           <TaskGroup tasks={ dailies } />
         </div>
         <div className="col-3">
-          <h3>Todos</h3>
+          <h2>Todos</h2>
           <TaskGroup tasks={ todos } />
         </div>
       </div>
