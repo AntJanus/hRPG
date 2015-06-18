@@ -2,7 +2,7 @@ import React from 'react';
 import TaskStore from '../stores/TaskStore';
 import TaskActions from '../actions/TaskActions';
 
-import Task from './Task.jsx';
+import TaskGroup from './TaskGroup.jsx';
 
 class Tasks extends React.Component {
   constructor() {
@@ -49,33 +49,15 @@ class Tasks extends React.Component {
       <div className="grid">
         <div className="col-3">
           <h3>Habits</h3>
-          <ul className="task-list">
-            { habits.map((task) => {
-              return (
-                  <Task taskData={ task } key={ task.id }/>
-              );
-            })}
-          </ul>
+          <TaskGroup tasks={ habits } />
         </div>
         <div className="col-3">
           <h3>Dailies</h3>
-          <ul className="task-list">
-            { dailies.map((task) => {
-              return (
-                  <Task taskData={ task } key={ task.id }/>
-              );
-            })}
-          </ul>
+          <TaskGroup tasks={ dailies } />
         </div>
         <div className="col-3">
           <h3>Todos</h3>
-          <ul className="task-list">
-            { todos.map((task) => {
-              return (
-                  <Task taskData={ task } key={ task.id }/>
-              );
-            })}
-          </ul>
+          <TaskGroup tasks={ todos } />
         </div>
       </div>
     );
