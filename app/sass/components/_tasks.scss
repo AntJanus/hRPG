@@ -1,0 +1,42 @@
+.task-list {
+  list-style-type: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.task {
+  margin-bottom: 5px;
+  border: 1px solid black;
+
+  &.habit {
+    background-color: $habit;
+    border-color: $habit-dark;
+  }
+
+  &.daily {
+    background-color: $daily;
+    border-color: $daily-dark;
+  }
+
+  &.todo {
+    background-color: $todo;
+    border-color: $todo-dark;
+  }
+
+  &.completed {
+    background-color: $completed;
+    border-color: $completed-dark;
+    color: $faded;
+  }
+
+}
+
+.task-check, .task-content {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px;
+}
+
+.task-check {
+  color: $faded;
+}

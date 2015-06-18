@@ -49,7 +49,9 @@ gulp.task('scripts', ['copy'], function() {
 
 gulp.task('sass', function() {
   return gulp.src(sassDir + '/app.scss')
-    .pipe(sass())
+    .pipe(sass({
+      includePaths: './app/sass'
+    }))
     .pipe(autoprefixer({
       browsers: ['last 2 versions', 'ie 9'],
       cascade: false
