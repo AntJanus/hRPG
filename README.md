@@ -19,3 +19,11 @@ Here are some differences between using HabitRPG and this client instead (most o
 
 1. tasks are sorted into tag sections so that you can, at a glance, see what type of tasks are left to do.
 2. collapsible sections. All tasks start out closed out on mobile to avoid rendering tons of small tasks.
+
+##To do
+
+- [ ] filter out tasks not relevant to "today"
+- [ ] add +/- buttons for habits
+- [ ] allow "check" action for all the various tasks
+- [ ] epic tasks checklist
+
