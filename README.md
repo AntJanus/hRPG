@@ -1,3 +1,5 @@
+# This repo is no longer maintained. Please refer to https://github.com/AntJanus/hRPG-lite-redux
+
 #HRPG Lite
 A HabitRPG light front-end for those that just can't stand Angular
 
